@@ -68,8 +68,10 @@ class Contact extends React.Component {
             <div className="row">
               <div className="col-lg-12">
                 <form
+                  method="POST"
+                  data-netlify={true}
                   id="contactForm"
-                  name="sentMessage"
+                  name="contactFrom"
                   noValidate="novalidate"
                   onSubmit={this.handleSubmit}
                 >

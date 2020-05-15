@@ -33,7 +33,13 @@ class Appointments extends React.Component {
         <Container className="appointments-container">
           <Row>
             <Col>
-              <Form className="appointments-form" onChange={this.handleChange}>
+              <Form
+                name="appointmentsForm"
+                className="appointments-form"
+                onChange={this.handleChange}
+                method="POST"
+                data-netlify={true}
+              >
                 <Row>
                   <Col>
                     <Form.Label>First Name</Form.Label>
