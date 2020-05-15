@@ -1,7 +1,6 @@
 import React from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import axios from "axios";
 
 class Contact extends React.Component {
   constructor() {
@@ -20,35 +19,6 @@ class Contact extends React.Component {
   handleChange = (event) => {
     event.preventDefault();
     this.setState({ [event.target.name]: event.target.value });
-  };
-
-  resetForm = () => {
-    this.setState({
-      name: "",
-      message: "",
-      email: "",
-      reason: "",
-    });
-  };
-
-  handleSubmit = (event) => {
-    event.preventDefault();
-
-    let data = {
-      name: this.state.name,
-      email: this.state.email,
-      reason: this.state.reason,
-      message: this.state.message,
-    };
-
-    axios
-      .post("API_URI", data)
-      .then((res) => {
-        this.setState({ sent: true }, this.resetForm());
-      })
-      .catch(() => {
-        console.log("Message not sent");
-      });
   };
 
   render() {
@@ -73,7 +43,6 @@ class Contact extends React.Component {
                   id="contactForm"
                   name="contactFrom"
                   noValidate="novalidate"
-                  onSubmit={this.handleSubmit}
                 >
                   <div className="row">
                     <div className="col-md-6">
