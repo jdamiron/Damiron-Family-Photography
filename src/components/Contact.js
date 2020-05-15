@@ -38,11 +38,13 @@ class Contact extends React.Component {
             <div className="row">
               <div className="col-lg-12">
                 <form
+                  netlify
+                  netlify-honeypot="bot-field"
+                  hidden
                   method="POST"
-                  data-netlify={true}
+                  data-netlify="true"
                   id="contactForm"
-                  name="contactFrom"
-                  noValidate="novalidate"
+                  name="contactForm"
                 >
                   <div className="row">
                     <div className="col-md-6">
