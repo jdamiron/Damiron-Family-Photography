@@ -36,14 +36,6 @@ class Contact extends React.Component {
         <section className="page-section" id="contact">
           <div className="container appointments-form">
             <div className="row">
-              <div className="col-lg-12 text-center">
-                <h2 className="section-heading text-uppercase">Contact Us</h2>
-                <h3 className="section-subheading text-muted">
-                  We'll be reaching out shortly!
-                </h3>
-              </div>
-            </div>
-            <div className="row">
               <div className="col-lg-12">
                 <form
                   data-netlify="true"

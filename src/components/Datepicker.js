@@ -36,7 +36,6 @@ class PickDate extends React.Component {
           setHours(setMinutes(new Date(), 0), 15),
           setHours(setMinutes(new Date(), 0), 17),
         ]}
-        action="../db.csv"
       />
     );
   }
