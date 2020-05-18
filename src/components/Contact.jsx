@@ -20,6 +20,15 @@ class Contact extends React.Component {
     this.setState({ [event.target.name]: event.target.value });
   };
 
+  clearForm = () => {
+    this.setState({
+      name: "",
+      email: "",
+      reason: "",
+      message: "",
+    });
+  };
+
   render() {
     return (
       <>
@@ -41,7 +50,7 @@ class Contact extends React.Component {
                   method="POST"
                   id="contactForm"
                   name="contactForm"
-                  action="https://tender-heyrovsky-b9724b.netlify.app/thanks"
+                  onSubmit={this.clearForm}
                 >
                   <input type="hidden" name="form-name" value="contactForm" />
                   <div className="row">
