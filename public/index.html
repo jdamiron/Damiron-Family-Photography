@@ -30,7 +30,13 @@
     <title>Damiron Family Photography</title>
   </head>
   <body>
-    <form name="contactForm" netlify netlify-honeypot="bot-field" hidden>
+    <form
+      name="contactForm"
+      action="/thanks"
+      netlify
+      netlify-honeypot="bot-field"
+      hidden
+    >
       <input className="form-control" id="name" name="name" type="text" />
       <input className="form-control" id="email" name="email" type="email" />
       <input className="form-control" id="reason" name="reason" type="text" />
