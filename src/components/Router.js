@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Appointments from "./Appointments";
-import Contact from "./Contact";
+import Contact from "./Contact.jsx";
 import App from "./App";
 import NotFound from "./NotFound";
 import Portfolio from "./Portfolio";

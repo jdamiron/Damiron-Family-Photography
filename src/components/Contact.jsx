@@ -1,12 +1,5 @@
 import React from "react";
 import Navbar from "./Navbar";
-import Footer from "./Footer";
-
-const encode = (data) => {
-  return Object.keys(data)
-    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&");
-};
 
 class Contact extends React.Component {
   constructor() {
@@ -27,18 +20,6 @@ class Contact extends React.Component {
     this.setState({ [event.target.name]: event.target.value });
   };
 
-  handleSubmit = (e) => {
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...this.state }),
-    })
-      .then(() => alert("Success!"))
-      .catch((error) => alert(error));
-
-    e.preventDefault();
-  };
-
   render() {
     return (
       <>
@@ -57,9 +38,9 @@ class Contact extends React.Component {
               <div className="col-lg-12">
                 <form
                   data-netlify="true"
+                  method="POST"
                   id="contactForm"
                   name="contactForm"
-                  onSubmit={this.handleSubmit}
                 >
                   <div className="row">
                     <div className="col-md-6">
@@ -134,7 +115,6 @@ class Contact extends React.Component {
             </div>
           </div>
         </section>
-        <Footer />
       </>
     );
   }
