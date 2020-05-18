@@ -42,6 +42,7 @@ class Contact extends React.Component {
                   id="contactForm"
                   name="contactForm"
                 >
+                  <input type="hidden" name="form-name" value="contactForm" />
                   <div className="row">
                     <div className="col-md-6">
                       <div className="form-group">
