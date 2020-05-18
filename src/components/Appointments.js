@@ -26,6 +26,16 @@ class Appointments extends React.Component {
     this.setState({ [event.target.name]: event.target.value });
   };
 
+  clearForm = () => {
+    this.setState({
+      firstName: "",
+      lastName: "",
+      email: "",
+      bookDate: "",
+      bookTime: "",
+    });
+  };
+
   render() {
     return (
       <>
@@ -39,6 +49,7 @@ class Appointments extends React.Component {
                 onChange={this.handleChange}
                 method="POST"
                 data-netlify={true}
+                onSubmit={this.clearForm}
               >
                 <input
                   type="hidden"

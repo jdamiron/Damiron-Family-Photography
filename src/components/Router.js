@@ -5,7 +5,6 @@ import Contact from "./Contact.jsx";
 import App from "./App";
 import NotFound from "./NotFound";
 import Portfolio from "./Portfolio";
-import ThankYouPage from "./Thanks";
 
 const Router = () => (
   <BrowserRouter>
@@ -14,7 +13,6 @@ const Router = () => (
       <Route path="/appointments" component={Appointments} />
       <Route path="/contact" component={Contact} />
       <Route path="/portfolio" component={Portfolio} />
-      <Route path="/thanks" component={ThankYouPage} />
       <Route component={NotFound} />
     </Switch>
   </BrowserRouter>
