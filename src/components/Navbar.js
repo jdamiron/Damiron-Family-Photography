@@ -12,7 +12,7 @@ class Navbar extends React.Component {
             <a className="navbar-brand js-scroll-trigger" href="/">
               <img
                 className="header-logo"
-                src="./images/DFP.png"
+                src="./images/DFP - Transparent.png"
                 alt="logo"
               ></img>
             </a>

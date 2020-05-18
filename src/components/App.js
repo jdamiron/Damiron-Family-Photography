@@ -9,11 +9,11 @@ class App extends React.Component {
     return (
       <div className="App">
         <Navbar />
-        <Carousel indicators={false}>
+        <Carousel indicators={false} controls={false}>
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="./images/milkbath.jpg"
+              src="./images/website5.jpg"
               alt="First slide"
             />
           </Carousel.Item>

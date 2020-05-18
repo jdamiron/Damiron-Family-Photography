@@ -15,8 +15,6 @@ class Appointments extends React.Component {
       firstName: "",
       lastName: "",
       email: "",
-      bookDate: "",
-      bookTime: "",
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -31,8 +29,6 @@ class Appointments extends React.Component {
       firstName: "",
       lastName: "",
       email: "",
-      bookDate: "",
-      bookTime: "",
     });
   };
 
@@ -79,23 +75,6 @@ class Appointments extends React.Component {
                     className="datepicker"
                     required
                   ></PickDate>
-                </Form.Group>
-                <Form.Group controlId="exampleForm.ControlSelect1">
-                  <Form.Label>
-                    Which time slot would you like to book?
-                  </Form.Label>
-                  <Form.Control
-                    required
-                    name="bookTime"
-                    as="select"
-                    placeholder="Select a Time Slot"
-                  >
-                    <option>11:30am</option>
-                    <option>12:00pm</option>
-                    <option>1:00pm</option>
-                    <option>5:00pm</option>
-                    <option>6:00pm</option>
-                  </Form.Control>
                 </Form.Group>
                 <button className="form-button" type="submit">
                   Submit

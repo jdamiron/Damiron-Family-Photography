@@ -9,7 +9,7 @@ class MainCarousel extends Component {
     return (
       <Carousel>
         <div>
-          <img src="assets/img/milkbath.jpg" />
+          <img src="assets/img/website5.jpg" />
           <p className="legend">Legend 1</p>
         </div>
         <div>

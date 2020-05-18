@@ -1,47 +1,102 @@
 export const photos = [
   {
-    src: "https://source.unsplash.com/2ShvY8Lf6l0/800x599",
+    src: "/images/website3.jpg",
     width: 4,
     height: 3,
   },
   {
-    src: "https://source.unsplash.com/Dm-qxdynoEc/800x799",
-    width: 1,
-    height: 1,
-  },
-  {
-    src: "https://source.unsplash.com/qDkso9nvCg0/600x799",
-    width: 3,
-    height: 4,
-  },
-  {
-    src: "https://source.unsplash.com/iecJiKe_RNg/600x799",
-    width: 3,
-    height: 4,
-  },
-  {
-    src: "https://source.unsplash.com/epcsn8Ed8kY/600x799",
-    width: 3,
-    height: 4,
-  },
-  {
-    src: "https://source.unsplash.com/NQSWvyVRIJk/800x599",
+    src: "/images/website14.jpg",
     width: 4,
     height: 3,
   },
   {
-    src: "https://source.unsplash.com/zh7GEuORbUw/600x799",
+    src: "/images/website17.jpg",
     width: 3,
     height: 4,
   },
   {
-    src: "https://source.unsplash.com/PpOHJezOalU/800x599",
+    src: "/images/website12.jpg",
+    width: 3,
+    height: 4,
+  },
+  {
+    src: "/images/website.jpg",
     width: 4,
     height: 3,
   },
   {
-    src: "https://source.unsplash.com/I1ASdgphUH4/800x599",
+    src: "/images/website8.jpg",
     width: 4,
+    height: 3,
+  },
+
+  {
+    src: "/images/website5.jpg",
+    width: 4,
+    height: 3,
+  },
+  {
+    src: "/images/website11.jpg",
+    width: 3,
+    height: 4,
+  },
+
+  {
+    src: "/images/website7.jpg",
+    width: 4,
+    height: 3,
+  },
+
+  {
+    src: "/images/website9.jpg",
+    width: 4,
+    height: 3,
+  },
+  {
+    src: "/images/website10.jpg",
+    width: 4,
+    height: 3,
+  },
+  {
+    src: "/images/website4.jpg",
+    width: 4,
+    height: 3,
+  },
+  {
+    src: "/images/website6.jpg",
+    width: 4,
+    height: 3,
+  },
+
+  {
+    src: "/images/website13.jpg",
+    width: 4,
+    height: 3,
+  },
+  {
+    src: "/images/website2.jpg",
+    width: 4,
+    height: 3,
+  },
+  {
+    src: "/images/website15.jpg",
+    width: 4,
+    height: 3,
+  },
+  {
+    src: "/images/website16.jpg",
+    width: 3,
+    height: 4,
+  },
+
+  {
+    src: "/images/biori7.jpg",
+    width: 4,
+    height: 3,
+  },
+  {
+    src: "/images/IMG_5441.JPG",
+    width: 5,
     height: 3,
   },
 ];
