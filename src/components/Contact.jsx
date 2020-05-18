@@ -41,6 +41,7 @@ class Contact extends React.Component {
                   method="POST"
                   id="contactForm"
                   name="contactForm"
+                  action="/thanks.html"
                 >
                   <input type="hidden" name="form-name" value="contactForm" />
                   <div className="row">
