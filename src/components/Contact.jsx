@@ -41,7 +41,7 @@ class Contact extends React.Component {
                   method="POST"
                   id="contactForm"
                   name="contactForm"
-                  action="/thanks"
+                  action="https://tender-heyrovsky-b9724b.netlify.app/thanks"
                 >
                   <input type="hidden" name="form-name" value="contactForm" />
                   <div className="row">
