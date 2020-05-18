@@ -36,6 +36,22 @@
       <input className="form-control" id="reason" name="reason" type="text" />
       <textarea className="form-control" id="message" name="message"></textarea>
     </form>
+    <form name="appointmentsForm" netlify netlify-honeypot="bot-field" hidden>
+      <input name="firstName" class="form-control" />
+      <input name="lastName" class="form-control" />
+      <input
+        name="email"
+        type="email"
+        id="exampleForm.ControlInput1"
+        class="form-control"
+      />
+      <input type="text" name="datepicker" class="datepick" />
+      <select
+        name="bookTime"
+        id="exampleForm.ControlSelect1"
+        class="form-control"
+      ></select>
+    </form>
     <div id="root"></div>
   </body>
 </html>

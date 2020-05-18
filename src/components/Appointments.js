@@ -40,6 +40,12 @@ class Appointments extends React.Component {
                 method="POST"
                 data-netlify={true}
               >
+                <input
+                  type="hidden"
+                  name="form-name"
+                  value="appointmentsForm"
+                />
+
                 <Row>
                   <Col>
                     <Form.Label>First Name</Form.Label>

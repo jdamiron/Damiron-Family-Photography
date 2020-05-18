@@ -23,6 +23,7 @@ class PickDate extends React.Component {
         className="datepick"
         minDate={moment().add(1, "week").toDate()}
         placeholderText="Select an Appointment Date"
+        name="datepicker"
       />
     );
   }
