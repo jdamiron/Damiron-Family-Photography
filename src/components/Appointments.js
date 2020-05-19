@@ -12,8 +12,7 @@ class Appointments extends React.Component {
     super();
 
     this.state = {
-      firstName: "",
-      lastName: "",
+      fullName: "",
       email: "",
     };
 
@@ -26,8 +25,7 @@ class Appointments extends React.Component {
 
   clearForm = () => {
     this.setState({
-      firstName: "",
-      lastName: "",
+      fullName: "",
       email: "",
     });
   };
@@ -55,12 +53,8 @@ class Appointments extends React.Component {
 
                 <Row>
                   <Col>
-                    <Form.Label>First Name</Form.Label>
-                    <Form.Control required name="firstName" />
-                  </Col>
-                  <Col>
-                    <Form.Label>Last Name</Form.Label>
-                    <Form.Control required name="lastName" />
+                    <Form.Label>Full Name</Form.Label>
+                    <Form.Control required name="fullName" />
                   </Col>
                 </Row>
                 <Form.Group controlId="exampleForm.ControlInput1">
@@ -68,7 +62,9 @@ class Appointments extends React.Component {
                   <Form.Control required name="email" type="email" />
                 </Form.Group>
                 <Form.Group controlId="exampleForm.ControlSelect2">
-                  <Form.Label>Which day are you looking to book?</Form.Label>
+                  <Form.Label className="appointment-label">
+                    When would you like to book?
+                  </Form.Label>
                   <PickDate
                     onClick={this.handleChange}
                     name="bookDate"
@@ -77,7 +73,7 @@ class Appointments extends React.Component {
                   ></PickDate>
                 </Form.Group>
                 <button className="form-button" type="submit">
-                  Submit
+                  SUBMIT
                 </button>
               </Form>
             </Col>

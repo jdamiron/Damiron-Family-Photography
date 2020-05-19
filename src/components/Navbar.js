@@ -1,6 +1,8 @@
 import React from "react";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
 
-class Navbar extends React.Component {
+class ReactNavbar extends React.Component {
   render() {
     return (
       <>
@@ -16,17 +18,7 @@ class Navbar extends React.Component {
                 alt="logo"
               ></img>
             </a>
-            <button
-              className="navbar-toggler navbar-toggler-right"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbarResponsive"
-              aria-controls="navbarResponsive"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <i className="fa fa-bars"></i>
-            </button>
+
             <div className="collapse navbar-collapse" id="navbarResponsive">
               <ul className="navbar-nav text-uppercase ml-auto">
                 <li className="nav-item">
@@ -83,9 +75,31 @@ class Navbar extends React.Component {
             </div>
           </div>
         </nav>
+
+        <Navbar id="mobile-menu" collapseOnSelect expand="lg">
+          <a className="navbar-brand js-scroll-trigger" href="/">
+            <img
+              className="header-logo"
+              src="./images/DFPMobile.png"
+              alt="logo"
+            ></img>
+          </a>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="mr-auto">
+              <Nav.Link href="/">Home</Nav.Link>
+              <Nav.Link href="portfolio">Image Gallery</Nav.Link>
+              <Nav.Link href="contact">Contact</Nav.Link>
+              <Nav.Link href="appointments">Book an Appointment</Nav.Link>
+              <Nav.Link href="https://www.instagram.com/damironfamilyphotography/">
+                Follow us on Instagram!
+              </Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
       </>
     );
   }
 }
 
-export default Navbar;
+export default ReactNavbar;

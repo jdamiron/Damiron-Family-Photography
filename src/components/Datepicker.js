@@ -25,7 +25,7 @@ class PickDate extends React.Component {
         onChange={this.handleChange}
         className="datepick"
         minDate={moment().add(1, "week").toDate()}
-        placeholderText="Select an Appointment Date"
+        placeholderText="Select a Booking Date"
         name="datepicker"
         showTimeSelect
         dateFormat="Pp"
