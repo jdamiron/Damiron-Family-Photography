@@ -72,6 +72,15 @@ class Appointments extends React.Component {
                     required
                   ></PickDate>
                 </Form.Group>
+                <Form.Group controlId="exampleForm.ControlSelect1">
+                  <Form.Label>Photosession Type</Form.Label>
+                  <Form.Control as="select">
+                    <option>Maternity (Please book 3 weeks in advance)</option>
+                    <option>Newborn</option>
+                    <option>Cake Smash</option>
+                    <option>Milestone</option>
+                  </Form.Control>
+                </Form.Group>
                 <button className="form-button" type="submit">
                   SUBMIT
                 </button>
