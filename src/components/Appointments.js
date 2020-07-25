@@ -23,7 +23,7 @@ class Appointments extends React.Component {
     this.setState({ [event.target.name]: event.target.value });
   };
 
-  clearForm = () => {
+  clearForm = (e) => {
     this.setState({
       fullName: "",
       email: "",
@@ -74,7 +74,7 @@ class Appointments extends React.Component {
                 </Form.Group>
                 <Form.Group controlId="exampleForm.ControlSelect1">
                   <Form.Label>Photosession Type</Form.Label>
-                  <Form.Control as="select">
+                  <Form.Control as="select" required name="photoStyle">
                     <option>Maternity (Please book 3 weeks in advance)</option>
                     <option>Newborn</option>
                     <option>Cake Smash</option>
