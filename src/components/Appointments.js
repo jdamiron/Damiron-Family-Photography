@@ -10,7 +10,6 @@ import moment from "moment";
 import setMinutes from "date-fns/setMinutes";
 import setHours from "date-fns/setHours";
 import * as firebase from "firebase";
-import Booked from "./Booked";
 
 import "react-datepicker/dist/react-datepicker.css";
 
