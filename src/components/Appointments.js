@@ -3,17 +3,36 @@ import Form from "react-bootstrap/Form";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import PickDate from "./Datepicker";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import DatePicker from "react-datepicker";
+import moment from "moment";
+import setMinutes from "date-fns/setMinutes";
+import setHours from "date-fns/setHours";
+import * as firebase from "firebase";
+import Booked from "./Booked";
+
+import "react-datepicker/dist/react-datepicker.css";
 
 class Appointments extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+
+    this.app = firebase.initializeApp({
+      apiKey: "AIzaSyAGDPnJdFSjbIaAndJup2jiPSwto0MfsQY",
+      authDomain: "damiron-family-photography.firebaseapp.com",
+      databaseURL: "https://damiron-family-photography.firebaseio.com",
+      projectId: "damiron-family-photography",
+      storageBucket: "damiron-family-photography.appspot.com",
+      messagingSenderId: "646823586096",
+      appId: "1:646823586096:web:2d54358ad6eeb4bd6380f5",
+    });
 
     this.state = {
       fullName: "",
       email: "",
+      startDate: "",
+      times: "",
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -23,12 +42,60 @@ class Appointments extends React.Component {
     this.setState({ [event.target.name]: event.target.value });
   };
 
-  clearForm = (e) => {
+  handleDateChange = (date) => {
+    this.setState({
+      startDate: date,
+    });
+  };
+
+  postDataHandler = (e) => {
+    e.preventDefault();
+
+    const Data = {
+      time: this.state.startDate,
+    };
+
+    this.app.firestore().collection("booked").add(Data);
+
     this.setState({
       fullName: "",
       email: "",
     });
   };
+
+  getBookedDays = () => {
+    const days = [];
+    const bookedDays = [];
+    const stateTimes = this.state.times;
+
+    for (let i = 0; i < stateTimes.length; i++) {
+      bookedDays.push(stateTimes[i].time.toDate());
+    }
+
+    for (let i = 0; i < 1000; i += 7) {
+      days.push(moment().day(14 + i)._d);
+    }
+    for (let i = 0; i < 1000; i += 7) {
+      days.push(moment().day(15 + i)._d);
+    }
+    const schedule = days.concat(bookedDays);
+    return schedule;
+  };
+
+  componentDidMount() {
+    this.app
+      .firestore()
+      .collection("booked")
+      .onSnapshot((snapshot) => {
+        const newItems = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        this.setState({
+          times: newItems,
+        });
+      });
+  }
 
   render() {
     return (
@@ -43,7 +110,7 @@ class Appointments extends React.Component {
                 onChange={this.handleChange}
                 method="POST"
                 data-netlify={true}
-                onSubmit={this.clearForm}
+                onSubmit={this.postDataHandler}
               >
                 <input
                   type="hidden"
@@ -65,12 +132,31 @@ class Appointments extends React.Component {
                   <Form.Label className="appointment-label">
                     When would you like to book?
                   </Form.Label>
-                  <PickDate
+                  {/* <PickDate
                     onClick={this.handleChange}
                     name="bookDate"
                     className="datepicker"
                     required
-                  ></PickDate>
+                  ></PickDate> */}
+                  <DatePicker
+                    required
+                    selected={this.state.startDate}
+                    onChange={this.handleDateChange}
+                    className="datepick"
+                    minDate={moment().add(1, "week").toDate()}
+                    placeholderText="Select a Booking Date"
+                    name="datepicker"
+                    showTimeSelect
+                    dateFormat="Pp"
+                    isClearable
+                    timeIntervals={60}
+                    excludeDates={this.getBookedDays()}
+                    includeTimes={[
+                      setHours(setMinutes(new Date(), 0), 13),
+                      setHours(setMinutes(new Date(), 0), 15),
+                      setHours(setMinutes(new Date(), 0), 17),
+                    ]}
+                  />
                 </Form.Group>
                 <Form.Group controlId="exampleForm.ControlSelect1">
                   <Form.Label>Photosession Type</Form.Label>
