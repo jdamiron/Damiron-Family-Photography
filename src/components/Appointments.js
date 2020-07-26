@@ -71,10 +71,10 @@ class Appointments extends React.Component {
       bookedDays.push(stateTimes[i].time.toDate());
     }
 
-    for (let i = 0; i < 100; i += 7) {
+    for (let i = 0; i < 200; i += 7) {
       days.push(moment().day(14 + i)._d);
     }
-    for (let i = 0; i < 100; i += 7) {
+    for (let i = 0; i < 200; i += 7) {
       days.push(moment().day(15 + i)._d);
     }
     const schedule = days.concat(bookedDays);
