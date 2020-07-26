@@ -48,8 +48,6 @@ class Appointments extends React.Component {
   };
 
   postDataHandler = (e) => {
-    e.preventDefault();
-
     const Data = {
       time: this.state.startDate,
     };
