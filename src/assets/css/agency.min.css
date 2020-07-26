@@ -770,3 +770,7 @@ div#root {
     font-size: 23px;
   }
 }
+
+input.datepick {
+  background-color: transparent !important;
+}
