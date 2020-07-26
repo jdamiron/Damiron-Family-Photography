@@ -131,13 +131,8 @@ class Appointments extends React.Component {
                   <Form.Label className="appointment-label">
                     When would you like to book?
                   </Form.Label>
-                  {/* <PickDate
-                    onClick={this.handleChange}
-                    name="bookDate"
-                    className="datepicker"
-                    required
-                  ></PickDate> */}
                   <DatePicker
+                    popperPlacement="top"
                     required
                     selected={this.state.startDate}
                     onChange={this.handleDateChange}
