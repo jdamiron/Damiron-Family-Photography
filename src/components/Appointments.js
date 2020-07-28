@@ -75,6 +75,9 @@ class Appointments extends React.Component {
     for (let i = 0; i < 200; i += 7) {
       days.push(moment().day(15 + i)._d);
     }
+    console.log(days);
+    days.splice(3, 1);
+    console.log(days);
     const schedule = days.concat(bookedDays);
     return schedule;
   };
@@ -151,12 +154,13 @@ class Appointments extends React.Component {
                   />
                 </Form.Group>
                 <Form.Group controlId="exampleForm.ControlSelect1">
-                  <Form.Label>Photosession Type</Form.Label>
+                  <Form.Label>Photo Session Type</Form.Label>
                   <Form.Control as="select" required name="photoStyle">
                     <option>Maternity (Please book 3 weeks in advance)</option>
                     <option>Newborn</option>
                     <option>Cake Smash</option>
                     <option>Milestone</option>
+                    <option>Sunflower Field</option>
                   </Form.Control>
                 </Form.Group>
                 <button className="form-button" type="submit">

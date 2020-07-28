@@ -57,7 +57,7 @@ class ReactNavbar extends React.Component {
                     ref={this.myInput}
                     name="appointments"
                   >
-                    Book an appointment
+                    Book a Photo Session
                   </a>
                 </li>
               </ul>
