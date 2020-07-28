@@ -58,6 +58,8 @@ class Appointments extends React.Component {
       fullName: "",
       email: "",
     });
+
+    this.getBookedDays();
   };
 
   getBookedDays = () => {
