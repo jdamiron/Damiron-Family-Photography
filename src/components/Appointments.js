@@ -5,12 +5,12 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import DatePicker from "react-datepicker";
+// import DatePicker from "react-datepicker";
 import moment from "moment";
-import setMinutes from "date-fns/setMinutes";
-import setHours from "date-fns/setHours";
+// import setMinutes from "date-fns/setMinutes";
+// import setHours from "date-fns/setHours";
 import * as firebase from "firebase";
-import $ from "jquery";
+// import $ from "jquery";
 
 import "react-datepicker/dist/react-datepicker.css";
 
