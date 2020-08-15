@@ -5,10 +5,10 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-// import DatePicker from "react-datepicker";
+import DatePicker from "react-datepicker";
 import moment from "moment";
-// import setMinutes from "date-fns/setMinutes";
-// import setHours from "date-fns/setHours";
+import setMinutes from "date-fns/setMinutes";
+import setHours from "date-fns/setHours";
 import * as firebase from "firebase";
 // import $ from "jquery";
 
@@ -116,8 +116,7 @@ class Appointments extends React.Component {
                   name="form-name"
                   value="appointmentsForm"
                 />
-
-                <Row>
+                {/* <Row>
                   <Col>
                     <div className="fully-booked">
                       We are fully booked for the near future.
@@ -129,9 +128,13 @@ class Appointments extends React.Component {
                       Check out the image gallery in the meantime. Stay tuned!
                     </div>
                   </Col>
+                </Row> */}
+                <Row>
+                  <Col>
+                    <Form.Label>Full Name</Form.Label>
+                    <Form.Control required name="fullName" />
+                  </Col>
                 </Row>
-
-                {/* 
                 <Form.Group controlId="exampleForm.ControlInput1">
                   <Form.Label className="email-in-form">Email</Form.Label>
                   <Form.Control required name="email" type="email" />
@@ -158,7 +161,7 @@ class Appointments extends React.Component {
                     selected={this.state.startDate}
                     onChange={this.handleDateChange}
                     className="datepick"
-                    minDate={moment().add(1, "week").toDate()}
+                    minDate={moment().endOf("month").toDate()}
                     placeholderText="Select a Booking Date"
                     name="datepicker"
                     showTimeSelect
@@ -173,10 +176,9 @@ class Appointments extends React.Component {
                     ]}
                   />
                 </Form.Group>
-
-                <button disabled className="form-button" type="submit">
+                <button className="form-button" type="submit">
                   SUBMIT
-                </button> */}
+                </button>
               </Form>
             </Col>
           </Row>
