@@ -774,3 +774,7 @@ div#root {
 input.datepick {
   background-color: transparent !important;
 }
+
+.fully-booked {
+  text-align: center;
+}

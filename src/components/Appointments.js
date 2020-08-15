@@ -10,6 +10,7 @@ import moment from "moment";
 import setMinutes from "date-fns/setMinutes";
 import setHours from "date-fns/setHours";
 import * as firebase from "firebase";
+import $ from "jquery";
 
 import "react-datepicker/dist/react-datepicker.css";
 
@@ -118,13 +119,34 @@ class Appointments extends React.Component {
 
                 <Row>
                   <Col>
-                    <Form.Label>Full Name</Form.Label>
-                    <Form.Control required name="fullName" />
+                    <div className="fully-booked">
+                      We are fully booked for the near future.
+                    </div>
+                    <div className="fully-booked">
+                      We will be taking new Photo sessions soon.
+                    </div>
+                    <div className="fully-booked">
+                      Check out the image gallery in the meantime. Stay tuned!
+                    </div>
                   </Col>
                 </Row>
+
+                {/* 
                 <Form.Group controlId="exampleForm.ControlInput1">
                   <Form.Label className="email-in-form">Email</Form.Label>
                   <Form.Control required name="email" type="email" />
+                </Form.Group>
+                <Form.Group controlId="exampleForm.ControlSelect1">
+                  <Form.Label>Photo Session Type</Form.Label>
+                  <Form.Control as="select" required name="photoStyle">
+                    <option value="Maternity">
+                      Maternity (Please book 3 weeks in advance)
+                    </option>
+                    <option value="Newborn">Newborn</option>
+                    <option value="Cake Smash">Cake Smash</option>
+                    <option value="Milestone">Milestone</option>
+                    <option value="Sunflower Field">Sunflower Field</option>
+                  </Form.Control>
                 </Form.Group>
                 <Form.Group controlId="exampleForm.ControlSelect2">
                   <Form.Label className="appointment-label">
@@ -151,19 +173,10 @@ class Appointments extends React.Component {
                     ]}
                   />
                 </Form.Group>
-                <Form.Group controlId="exampleForm.ControlSelect1">
-                  <Form.Label>Photo Session Type</Form.Label>
-                  <Form.Control as="select" required name="photoStyle">
-                    <option>Maternity (Please book 3 weeks in advance)</option>
-                    <option>Newborn</option>
-                    <option>Cake Smash</option>
-                    <option>Milestone</option>
-                    <option>Sunflower Field</option>
-                  </Form.Control>
-                </Form.Group>
-                <button className="form-button" type="submit">
+
+                <button disabled className="form-button" type="submit">
                   SUBMIT
-                </button>
+                </button> */}
               </Form>
             </Col>
           </Row>
