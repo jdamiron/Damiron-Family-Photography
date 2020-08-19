@@ -5,10 +5,10 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import DatePicker from "react-datepicker";
+// import DatePicker from "react-datepicker";
 import moment from "moment";
-import setMinutes from "date-fns/setMinutes";
-import setHours from "date-fns/setHours";
+// import setMinutes from "date-fns/setMinutes";
+// import setHours from "date-fns/setHours";
 import * as firebase from "firebase";
 // import $ from "jquery";
 
@@ -116,20 +116,20 @@ class Appointments extends React.Component {
                   name="form-name"
                   value="appointmentsForm"
                 />
-                {/* <Row>
+                <Row>
                   <Col>
                     <div className="fully-booked">
                       We are fully booked for the near future.
                     </div>
                     <div className="fully-booked">
-                      We will be taking new Photo sessions soon.
+                      We will be taking new Photo Sessions soon.
                     </div>
                     <div className="fully-booked">
                       Check out the image gallery in the meantime. Stay tuned!
                     </div>
                   </Col>
-                </Row> */}
-                <Row>
+                </Row>
+                {/* <Row>
                   <Col>
                     <Form.Label>Full Name</Form.Label>
                     <Form.Control required name="fullName" />
@@ -178,7 +178,7 @@ class Appointments extends React.Component {
                 </Form.Group>
                 <button className="form-button" type="submit">
                   SUBMIT
-                </button>
+                </button>  */}
               </Form>
             </Col>
           </Row>
