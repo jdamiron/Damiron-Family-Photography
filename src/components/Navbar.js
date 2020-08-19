@@ -90,7 +90,7 @@ class ReactNavbar extends React.Component {
               <Nav.Link href="/">Home</Nav.Link>
               <Nav.Link href="portfolio">Image Gallery</Nav.Link>
               <Nav.Link href="contact">Contact</Nav.Link>
-              <Nav.Link href="appointments">Book an Appointment</Nav.Link>
+              <Nav.Link href="appointments">Book a Photo Session</Nav.Link>
               <Nav.Link href="https://www.instagram.com/damironfamilyphotography/">
                 Follow us on Instagram!
               </Nav.Link>
